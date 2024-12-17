@@ -45,7 +45,7 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
      - Provide a **`name`** for the policy.
 
 ![image](https://github.com/user-attachments/assets/b9290352-b857-43ca-a998-83fff902d6a1)
-    - **Authentication Method**:  
+    #### 3. 1**Authentication Method**:  
        - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
      - **Action**:  
        - choose **`Certificate from this CA`**, check **`Enable certificate to account mapping`** and then click on **`Browse`**.
@@ -62,15 +62,22 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 
 ### 4. Manage IP Filter Lists and Filter Actions  
    - After creating the policy:  
-     - Right-click the new policy and select **Manage IP filter lists and filter actions**.  
+     - Right-click the new policy and select **`Manage IP filter lists and filter actions`**.  
+
+![image](https://github.com/user-attachments/assets/afda015a-5e05-4ff5-adfb-3599918c9382)
 
 ### 5. Create IP Filters  
    - Define the IP addresses for both machines:  
-     - **Source**: IP of **Windows Server 2022**.  
-     - **Destination**: IP of **Windows 11**.  
+     - **`Source`**: IP of **Windows Server 2022**.  
+     - **`Destination`**: IP of **Windows 11**.
+
+![image](https://github.com/user-attachments/assets/930f4a07-3eb0-45ad-9594-5cacfdb98f18)
+
    - Apply the filters to the policy.  
 
-### 6. Set Authentication and Action  
+![image](https://github.com/user-attachments/assets/54ad2842-b47d-4169-b8c6-bfa99299e717)
+
+### 6. Set Authentication and Action(Optional if not set in 3. 1) 
    - Right-click the configured filter and set the following:  
      - **Authentication Method**:  
        - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
