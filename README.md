@@ -78,13 +78,17 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 
 ![image](https://github.com/user-attachments/assets/54ad2842-b47d-4169-b8c6-bfa99299e717)
 
+ - **Action**:  
+       - Set to **Require Secure Communication** or **Encrypt**.  
+
+ ![image](https://github.com/user-attachments/assets/d0f8bc0e-8beb-463d-a40f-faa14b08270b)
+
 ### 6. Set Authentication and Action(Optional if not set in 3. 1) 
    - Right-click the configured filter and set the following:  
      - **Authentication Method**:  
        - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
-     - **Action**:  
+   - **Action**:  
        - Set to **Require Secure Communication** or **Encrypt**.  
-
 ---
 
 ## Step 2: Import the IPsec Policy on Windows 11  
@@ -103,16 +107,20 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 ## Step 3: Assign Policies  
 
 ### Assign Policies on Both Machines  
-   - On **Windows Server 2022** and **Windows 11**:  
-     - Right-click the IPsec policy and select **Assign**.  
+   - On **`Windows Server 2022`** and **`Windows 11`**:  
+     - Right-click the IPsec policy and select **`Assign`**.  
+
+![image](https://github.com/user-attachments/assets/726b6755-5c09-4b9b-9de8-6b07b29d3d50)
 
 ### Verify Policy Assignment  
    - Open Command Prompt as Administrator.  
    - Run the following command to verify the active IPsec policy:  
 
      ```bash
-     netsh ipsec static show policy
+     netsh ipsec static show policy all 
      ```
+
+![image](https://github.com/user-attachments/assets/36e608af-6844-41e7-b6d5-d4c220318353)
 
 ---
 
@@ -120,12 +128,14 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 
 To confirm that IPsec is securing communication between the machines, follow these steps:
 
-1. Open Command Prompt on **both machines** as Administrator.  
+1. Open Command Prompt on **`both machines`** as Administrator.  
 2. Run the following command to view active IPsec connections:  
 
    ```bash
    netsh ipsec dynamic show all
    ```
+
+![image](https://github.com/user-attachments/assets/7de7d092-a513-4647-81e5-3cf13f335da3)
 
 3. Ensure that IPsec-secured packets are being transmitted.
 
@@ -184,8 +194,18 @@ To confirm that IPsec is securing communication between the machines, follow the
 
      ```
      <IP Address>:<Port>
-     Example: 192.168.1.10:3390  
+     Your username  
      ```
+
+![image](https://github.com/user-attachments/assets/03c0c8e4-ba5f-453a-8640-18d6bd613fdc)
+
+- Provide your password and follow the wizard.
+
+![image](https://github.com/user-attachments/assets/ff146cb8-abb3-47ff-8a02-dc196f1e6b90)
+
+- Congratulation, you now successfully login.
+
+![image](https://github.com/user-attachments/assets/e29bb72a-e576-45c7-9c46-db52e576c1c9)
 
 ---
 
