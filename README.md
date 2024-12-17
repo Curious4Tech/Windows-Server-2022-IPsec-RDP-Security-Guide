@@ -1,8 +1,6 @@
 # Windows-Server-2022-IPsec-RDP-Security-Guide
-Step-by-step guide to configure IPsec Policies and secure Remote Desktop (RDP) on Windows Server 2022 and Windows 11. Includes IPsec setup, custom RDP port configuration, and best security practices.
+Step-by-step guide to configure **`IPsec Policies`** and secure **`Remote Desktop (RDP)`** on Windows Server. Includes **`IPsec setup`**, custom **`RDP port`** configuration, and best security practices.
 
-
-Here’s the updated step-by-step guide with the **Key Points** and instructions for **changing the RDP port** on Windows Server or Windows 11. I’ve formatted it for clarity, included the new content, and ensured it blends seamlessly with the original guide.
 
 ---
 
