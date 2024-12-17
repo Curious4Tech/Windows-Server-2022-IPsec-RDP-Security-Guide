@@ -42,8 +42,23 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 ![image](https://github.com/user-attachments/assets/4898dd66-a138-4952-9aa8-8ca059540ae6)
 
    - Follow the wizard:  
-     - Provide a **`name`** for the policy.  
-     - Ensure **`Activate the default response rule`** is **`checked`**.  
+     - Provide a **`name`** for the policy.
+
+![image](https://github.com/user-attachments/assets/b9290352-b857-43ca-a998-83fff902d6a1)
+    - **Authentication Method**:  
+       - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
+     - **Action**:  
+       - choose **`Certificate from this CA`**, check **`Enable certificate to account mapping`** and then click on **`Browse`**.
+
+   ![image](https://github.com/user-attachments/assets/7ee967de-40b6-4183-8b3d-ef4000759d49)
+
+   - In the pop-pup that is going to open, just click on **`OK`**.
+
+![image](https://github.com/user-attachments/assets/23c023e5-fd96-4bcf-91cc-76d2e65bfca5)
+
+   - Ensure **`Activate the default response rule`** is **`checked`**.  
+
+![image](https://github.com/user-attachments/assets/df4a3a8e-1ee9-4050-bc24-4357b03f742d)
 
 ### 4. Manage IP Filter Lists and Filter Actions  
    - After creating the policy:  
