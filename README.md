@@ -45,8 +45,9 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
      - Provide a **`name`** for the policy.
 
 ![image](https://github.com/user-attachments/assets/b9290352-b857-43ca-a998-83fff902d6a1)
-    #### 3. 1**Authentication Method**:  
-       - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
+    
+   ### 3. 1**Authentication Method**:  
+   - Choose either **Pre-shared key** (less secure) or **Certificates** (recommended for production).  
      - **Action**:  
        - choose **`Certificate from this CA`**, check **`Enable certificate to account mapping`** and then click on **`Browse`**.
 
