@@ -25,18 +25,25 @@ This guide provides a **step-by-step process** to configure **IP Security (IPsec
 
 ### 1. Open Group Policy Management or Local Security Policy  
    - Press `Win + R` to open the Run dialog.  
-   - Type `secpol.msc` and press Enter.  
+   - Type `secpol.msc` and press Enter.
+
+![image](https://github.com/user-attachments/assets/c13a87d8-12cd-4083-a7e0-4a0bdd35e2e5)
+
    - This opens the **Local Security Policy**.
 
 ### 2. Navigate to IP Security Policies  
-   - Go to:  
-     **IP Security Policies on Local Computer**.
+   - Go to:  **`IP Security Policies on Local Computer`**.
+
+![image](https://github.com/user-attachments/assets/e623d117-54ff-44fe-bd49-f49619848ef8)
 
 ### 3. Create a New IP Security Policy  
-   - Right-click **IP Security Policies on Local Computer** > Select **Create IP Security Policy**.  
+   - Right-click **`IP Security Policies on Local Computer`** > Select **`Create IP Security Policy`**.
+
+![image](https://github.com/user-attachments/assets/4898dd66-a138-4952-9aa8-8ca059540ae6)
+
    - Follow the wizard:  
-     - Provide a **name** for the policy.  
-     - Ensure **"Activate the default response rule"** is **checked**.  
+     - Provide a **`name`** for the policy.  
+     - Ensure **`Activate the default response rule`** is **`checked`**.  
 
 ### 4. Manage IP Filter Lists and Filter Actions  
    - After creating the policy:  
@@ -113,27 +120,43 @@ To confirm that IPsec is securing communication between the machines, follow the
 1. **Open the Registry Editor**:  
    - Press **`Win + R`**, type **`regedit`**, and press Enter.  
 
+![image](https://github.com/user-attachments/assets/787cc5ed-aaa1-4072-9b6a-f2650b278ada)
+
 2. **Navigate to the Registry Key**:  
    ```  
    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp  
    ```
 
 3. **Find and Modify the Port**:  
-   - Locate the **PortNumber** (DWORD) value.  
-   - Double-click **PortNumber**.  
-   - Select **Decimal** and enter the new port number (e.g., **3390**).  
+   - Locate the **`PortNumber`** (DWORD) value.  
+   - Double-click **`PortNumber`**.  
+   - Select **`Decimal`** and enter the new port number (e.g., **`1443`**).  
+
+![image](https://github.com/user-attachments/assets/3b6204f6-da03-4ece-94d4-795804786bf8)
 
 4. **Restart the RDP Service or Reboot the Machine**:  
    Run the following command in Command Prompt as Administrator:  
 
-   ```bash
-   net stop termservice && net start termservice
-   ```
+  
+   1. Stop the service
+  ```bash
+   net stop termservice
+  ```
+![image](https://github.com/user-attachments/assets/5e05afc1-66e5-490f-a1ad-c3cb516b2b07)
 
-5. **Update Firewall Settings**:  
-   - In **Windows Firewall**, create a **new inbound rule** to allow traffic through the **custom RDP port**.  
+  2. Start the service
+  ```bash
+   net start termservice
+  ```
+![image](https://github.com/user-attachments/assets/82227f82-26fe-4323-975b-440d364d13c4)
 
-6. **Accessing RDP with a Custom Port**:  
+
+6. **Update Firewall Settings**:  
+   - In **`Windows Firewall`**, create a **`new inbound rule`** to allow traffic through the **`custom RDP port`**.  
+
+![image](https://github.com/user-attachments/assets/4b74a9c5-2c22-4206-a0d4-93b73ac169df)
+
+7. **Accessing RDP with a Custom Port**:  
    - When connecting to the server using the Remote Desktop Client, specify the custom port:  
 
      ```
